@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12 ">
-            <a href="<?= base_url() ?>User/" class="btn btn-info">&larr; Back</a>
+            <a href="<?= base_url() ?>User/" class="btn btn-info">&larr; Kembali</a>
             <br><br>
             <div class="card">
                 <div class="card-header justify-content-center">
@@ -12,7 +12,7 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-form-label">Image</label>
+                                    <label class="col-sm-2 col-form-label">Gambar Profil</label>
                                     <img src="<?= base_url('assets/images/profile/default.png') ?>"
                                         style="width : 250px;" class="img-thumbnail">
                                 </div>
@@ -23,16 +23,16 @@
                             <label class="col-sm-2 col-form-label">NIK</label>
                             <div class="col-sm-10">
                                 <input type="NIK" name="NIK" class="form-control form-control-user"
-                                    value="<?= set_value('NIK'); ?>" id="NIK" placeholder="Insert NIK">
+                                    value="<?= set_value('NIK'); ?>" id="NIK" placeholder="Masukkan NIK">
                                 <?= form_error('NIK', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Full Name</label>
+                            <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                             <div class="col-sm-10">
                                 <input type="text" name="nama" class="form-control" id="nama"
-                                    placeholder="Insert Full Name">
+                                    placeholder="Masukkan Nama Lengkap">
                                 <?= form_error('nama','<small class="text-danger pl-3">','</small>'); ?>
                             </div>
                         </div>
@@ -41,16 +41,16 @@
                             <label class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
                                 <input type="text" name="email" class="form-control" id="email"
-                                    placeholder="Insert E-mail">
+                                    placeholder="Masukkan E-mail">
                                 
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Role</label>
+                            <label class="col-sm-2 col-form-label">Jabatan</label>
                             <div class="col-sm-10">
                                 <select name="role" class="form-control" id="role">
-                                    <option value="">Select Role...</option>
+                                    <option value="">Pilih Jabatan...</option>
                                     <option value="Pinbag">Pimpinan Bagian</option>
                                     <option value="Planning">IT Planning</option>
                                     <option value="Development">IT Development</option>
@@ -75,7 +75,7 @@
                         </div> -->
 
                         <div class="col-md-12">
-                            <button type="submit" name="tambah" class="btn btn-primary float-right">Save</button>
+                            <button type="submit" name="tambah" class="btn btn-primary float-right">Simpan Data</button>
                         </div>
                     </form>
                 </div>

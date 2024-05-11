@@ -144,7 +144,7 @@
                 class="nav-item <?=$this->uri->segment(1) == 'Dashboard' ? ' active"' : '' ?>">
                 <a class="nav-link" href="<?= base_url('Dashboard') ?>">
                     <i class="fas fa-fw fa-home"></i>
-                    <span>Dashboard</span>
+                    <span>Beranda</span>
                 </a>
             </li>
 
@@ -153,7 +153,7 @@
                 <a class="nav-link collapsed" href="<?= base_url('Project/index') ?>" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-clipboard"></i>
-                    <span>All Projects</span>
+                    <span>Proyek TSI</span>
                 </a>
             </li>
 
@@ -168,7 +168,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>Project</span>
+                    <span>Proyek</span>
                 </a>
                 <div id="collapsePages1"
                     class="collapse <?=$this->uri->segment(2) == 'indexlistproject' || $this->uri->segment(2) == 'indexhistory' || $this->uri->segment(2) == 'detail'|| $this->uri->segment(2) == 'detailhistory'
@@ -180,11 +180,11 @@
 				|| $this->uri->segment(2) == 'edituat' || $this->uri->segment(2) == 'detailmigrasi' || $this->uri->segment(2) == 'editmigrasi' ? ' show' : '' ?>"
                     aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Project List :</h6>
+                        <h6 class="collapse-header">Proyek :</h6>
                         <a class="collapse-item <?=$this->uri->segment(2) == 'indexlistproject' || $this->uri->segment(2) == 'detail' ? ' active' : '' ?>"
-                            href="<?= base_url('Project/indexlistproject') ?>">Project List</a>
+                            href="<?= base_url('Project/indexlistproject') ?>">Sedang Berlangsung</a>
                         <a class="collapse-item <?=$this->uri->segment(2) == 'indexhistory' || $this->uri->segment(2) == 'detailhistory'? ' active' : '' ?>"
-                            href="<?= base_url('Project/indexhistory') ?>">Project History</a>
+                            href="<?= base_url('Project/indexhistory') ?>">Riwayat</a>
                     </div>
             </li>
 
@@ -195,7 +195,7 @@
                  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>Application</span>
+                    <span>Migrasi Aplikasi</span>
                 </a>
 
                 <div id="collapsePages2" class="collapse <?=$this->uri->segment(1) == 'Inhouse' || $this->uri->segment(1) == 'Eksternal'
@@ -205,7 +205,7 @@
                     aria-labelledby="headingPages" data-parent="#accordionSidebar">
                    
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Application Version :</h6>
+                        <h6 class="collapse-header">Jenis Aplikasi :</h6>
                         <a class="collapse-item <?=$this->uri->segment(1) == 'Inhouse' 
                         || $this->uri->segment(2) == 'subinhouse' || $this->uri->segment(2) == 'detailinhouse' 
                         || $this->uri->segment(2) == 'editinhouse' ? ' active' : '' ?>"

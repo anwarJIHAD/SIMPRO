@@ -15,8 +15,9 @@ class Auth extends CI_Controller
         if ($this->session->userdata('NIK')) {
             redirect('User');
         }
-            $this->form_validation->set_rules('NIK', 'NIK', 'required',[
-            'required' => 'NIK tidak boleh kosong'
+        $this->form_validation->set_rules('NIK', 'NIK', 'required|numeric', [
+            'required' => 'NIK tidak boleh kosong.',
+            'numeric' => 'NIK hanya boleh berisi angka.'
         ]);
             $this->form_validation->set_rules('password', 'Password', 'required', [
             'required' => 'Kata sandi tidak boleh kosong'

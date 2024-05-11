@@ -15,16 +15,21 @@ class Password extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['NIK' => $this->session->userdata('NIK')])->row_array();
         $data['user'] = $this->userrole->getBy();
         $NIK = $this->input->get('NIK');
-        $this->form_validation->set_rules('password1', 'New Password', 'trim|matches[password2]');
-        $this->form_validation->set_rules('password2', 'Confirm New Password', 'required|trim|min_length[3]|matches[password1]');
-
-        $this->form_validation->set_rules('password1', 'New Password', 'min_length[3]',[
-            'min_length[3]' => 'Isi setidaknya 3 karakter'
+        $this->form_validation->set_rules('NIK', 'NIK', 'required|numeric', [
+            'required' => 'NIK tidak boleh kosong.',
+            'numeric' => 'NIK hanya boleh berisi angka.'
         ]);
+        $this->form_validation->set_rules('password1', 'Konfirmasi Password Baru', 'required|matches[password]|min_length[6]', array(
+            'required' => 'Kolom kata sandi diperlukan.',
+            'matches' => 'Tidak cocok dengan kata sandi baru.',
+            'min_length' => 'Panjang sandi minimal 6 karakter.'
+        ));
+        $this->form_validation->set_rules('password2', 'Konfirmasi Password Baru', 'required|matches[password]|min_length[6]', array(
+            'required' => 'Kolom kata sandi diperlukan.',
+            'matches' => 'Tidak cocok dengan kata sandi baru.',
+            'min_length' => 'Panjang sandi minimal 6 karakter.'
+        ));
 
-        $this->form_validation->set_rules('password1', 'New Password', 'required',[
-            'required' => 'Kata Sandi tidak boleh kosong'
-        ]);
         if ($this->form_validation->run() == false) {
             $this->load->view("layout/auth_header");
             $this->load->view("auth/password");

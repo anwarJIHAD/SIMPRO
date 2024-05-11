@@ -87,6 +87,13 @@ class Project_model extends CI_Model
 
 	}
 
+	function hitung()
+	{
+		// $this->db->query("SELECT (SUM(progresbrd)/SUM(bobot) *100)/100 from table_project)");
+
+		// return $this->db->get()->result();
+	}
+	
 	public function update($where, $data)
 	{
 		$this->db->update($this->table, $data, $where);
